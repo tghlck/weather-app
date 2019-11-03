@@ -1,0 +1,93 @@
+.navbar {
+    border-bottom: #1E90FF solid 4px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    font-weight: bold;
+    color: black;
+    line-height: 3rem;
+}
+
+p {
+    font-weight: bold;
+}
+
+#text {
+    font-weight: bold;
+}
+
+li {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    padding-left: 10px;
+}
+
+img {
+    margin-top: 1rem;
+}
+
+h5 {
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+img {
+    width: 50px;
+    height: 50;
+}
+
+.fiveDayColor {
+    padding: 20px;
+    background-color: #1E90FF;
+    color: white;
+    float: left;
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 25%;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+    margin: auto;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-top: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1rem;
+    padding-left: 1.25rem;
+    align-items: center;
+    vertical-align: center;
+}
+
+.currentCard {
+    font-weight: bold;
+    padding: 1.25rem;
+}
+
+.fiveDayCard {
+    font-weight: bold;
+    padding: 1.25rem;
+}
+
+.pb-2, .py-2 {
+    padding: 1.25rem!important;
+    margin-top: 1rem;
+}

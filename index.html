@@ -2,88 +2,78 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Weather Dashboard!</title>
+
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
+
+
     <nav class="navbar navbar-dark bg-dark text"
         style="display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
-        <a class="navbar-brand" href="index.html">Weather Dashboard</a>
-    </nav>
+        <a class="navbar-brand" href="index.html">Weather Dashboard</a></nav>
 
-    <div class="container">
+
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <div class="card-body text-center">
-
-
-                    <div class="card" style="width: 18rem;">
+            <div class="col md-2 text-center" style="margin-top: 2rem">
+                <div class="card-title text-center">
+                    <h5> Search by City </h5>
+                    <div class="card" style="margin-top: 1rem">
                         <div class="card-body bg-light">
-                            <h6 class="card-subtitle mb-2 text-muted">Search For A City</h6>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control searchInput" placeholder="Enter City Name"
-                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input type="text" class="form-control searchInput" placeholder="Enter City Name">
                                 <div class="input-group-append">
-                                    <button class="btn btn-primary bg-primary searchButton" type="button" id="button-addon2"> Search </button>
+                                    <button class="btn btn-primary bg-primary searchButton" type="button"> Search </button>
                                 </div>
                             </div>
-                           
-                            <ul class="list-group">
-
-                            </ul>
+                            <ul class="list-group"></ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col mt-4 mr-5">
-                <div class="card currentCard pb-2 pt-1">
-                    <h5 class="card-title mt-2 ml-5">Current Forecast</h5>
-                </div>
+            <div class="col md-10 text-center" style="margin-top: 2rem">
+                <h5 class="card-title text-center"> Current Forecast</h5>
+                <div class="card currentCard"></div>
             </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <div class="card pb-5 fiveDayCard pl-5">
-                       
-                        <h5 class="card-title mt-2 mr-5">5-Day Forecast </h5>
-                        <div class="row">
-                            <div class="col fiveDayOne">
-                            </div>
+        </div>
 
-                        </div>
+        <div class="row">
+            <div class="col md-2 text-center" style="margin-top: 2rem">
+                <h5 class="card-title">5-Day Forecast </h5>
+                <div class="col md-12 mt-4" style="align-content: center">
 
+                    <div class="card fiveDayCard" style="align-content: center">
+
+                        <div class="fiveDayOne"> </div>
                     </div>
                 </div>
             </div>
         </div>
 
-   
+        <script src="assets/javascript.js"></script>
 
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript">
-
-            var cityInput = ""
-            var apiKey = "9ff06de9f4fef7c1cc63d907e759220d";
-            var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&APPID=${apiKey}&units=imperial`
-
-
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            }).then(function (response) {
-                console.log(response);
-            });
-
-        </script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>
